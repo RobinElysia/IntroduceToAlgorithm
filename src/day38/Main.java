@@ -46,10 +46,10 @@ class Solution {
                 current = current.left;
             }
             // 弹出栈顶节点，访问它
-            current = stack.pop();
-            result.add(current.val);
+            current = stack.pop(); // 栈顶节点
+            result.add(current.val); // 访问节点
             // 转向右子树
-            current = current.right;
+            current = current.right; // 栈顶节点的右子树
         }
         return result;
     }
