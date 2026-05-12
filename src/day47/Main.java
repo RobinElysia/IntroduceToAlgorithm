@@ -37,7 +37,7 @@ class Solution {
                 // 如果是当前层的最后一个节点，加入结果集
                 if (i == size - 1) { // 当前层最后一个节点（也就是右侧节点
                     res.add(node.val); // 添加当前右节点的值到结果集
-                }
+                } // 如果左树的深度大于右树的深度，则右树没有节点，则当前节点的右节点为null，我们判断最后一个节点为左节点
                 // 标准层序遍历：先左后右入队
                 if (node.left != null) queue.offer(node.left);
                 if (node.right != null) queue.offer(node.right);
