@@ -51,9 +51,9 @@ class Solution {
         }
 
         int rootVal = preorder[preStart];
-        TreeNode root = new TreeNode(rootVal);
+        TreeNode root = new TreeNode(rootVal); // 创建根节点
 
-        int rootIndex = inorderIndexMap.get(rootVal);
+        int rootIndex = inorderIndexMap.get(rootVal); // 获取根节点在中序遍历中的索引
         int leftSize = rootIndex - inStart; // 左子树节点个数
 
         // 递归构建左子树：前序区间 [preStart+1, preStart+leftSize]
