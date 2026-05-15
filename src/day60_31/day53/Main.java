@@ -23,11 +23,11 @@ class Solution {
     private void dfs(char[][] grid, int i, int j) {
         if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] != '1') {
             return;
-        }
+        } // 边界条件, 越界或者不是陆地则返回
         grid[i][j] = '0';
-        dfs(grid, i - 1, j);
-        dfs(grid, i + 1, j);
-        dfs(grid, i, j - 1);
-        dfs(grid, i, j + 1);
+        dfs(grid, i - 1, j); // 上
+        dfs(grid, i + 1, j); // 下
+        dfs(grid, i, j - 1); // 左
+        dfs(grid, i, j + 1); // 右
     }
 }
