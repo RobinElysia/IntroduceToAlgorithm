@@ -15,10 +15,10 @@ class Solution {
             int mid = left + (right - left) / 2;
 
             // 比较 mid 和 right，确定最小值在哪一半
-            if (nums[mid] > nums[right]) {
+            if (nums[mid] > nums[right]) { // 如果 mid 落在左侧递增区间
                 // 断崖在右半部分，最小值在 mid 右边
                 left = mid + 1;
-            } else {
+            } else { // 如果 mid 落在右侧递增区间
                 // nums[mid] < nums[right]：断崖在左半部分（含 mid）
                 // nums[mid] == nums[right]：无法判断，收缩右边界
                 right = mid;
