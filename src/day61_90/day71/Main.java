@@ -13,7 +13,7 @@ class MinStack {
     private Stack<Integer> stack;      // 主栈
     private Stack<Integer> minStack;   // 辅助栈，存储最小值
 
-    public MinStack() {
+    public MinStack() { // 构造函数初始化两个栈
         stack = new Stack<>();
         minStack = new Stack<>();
     }
