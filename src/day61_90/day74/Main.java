@@ -18,8 +18,8 @@ class Solution {
         for (int i = 0; i <= n; i++) {
             int currentHeight = (i == n) ? 0 : heights[i]; // 这是为了在最后处理完所有柱子时，能够计算出剩余柱子的面积
 
-            while (top >= 0 && currentHeight < heights[stack[top]]) {
-                int height = heights[stack[top--]];
+            while (top >= 0 && currentHeight < heights[stack[top]]) { // 如果当前柱子比栈顶柱子矮，说明栈顶柱子无法再扩展了，可以计算面积
+                int height = heights[stack[top--]]; // 弹出栈顶柱子的高度
                 int width = (top == -1) ? i : i - stack[top] - 1;
                 maxArea = Math.max(maxArea, height * width);
             }
