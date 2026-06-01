@@ -25,21 +25,21 @@ class Solution {
 
         // 从第二行开始生成
         for (int rowNum = 1; rowNum < numRows; rowNum++) {
-            List<Integer> prevRow = triangle.get(rowNum - 1);
-            List<Integer> curRow = new ArrayList<>();
+            List<Integer> prevRow = triangle.get(rowNum - 1); // 上一行
+            List<Integer> curRow = new ArrayList<>(); // 当前行
 
             // 每行第一个元素为 1
             curRow.add(1);
 
             // 中间元素 = 上一行相邻两元素之和
             for (int j = 1; j < rowNum; j++) {
-                curRow.add(prevRow.get(j - 1) + prevRow.get(j));
+                curRow.add(prevRow.get(j - 1) + prevRow.get(j)); // 计算当前行的第 j 个元素
             }
 
             // 每行最后一个元素为 1
             curRow.add(1);
 
-            triangle.add(curRow);
+            triangle.add(curRow); // 将当前行添加到三角形中
         }
 
         return triangle;
