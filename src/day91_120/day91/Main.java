@@ -1,4 +1,4 @@
-package day61_90.day91;
+package day91_120.day91;
 
 /**
  * @author RobinElysia
@@ -35,7 +35,6 @@ class Solution {
                 dp[j] = dp[j] || dp[j - num];
             }
         }
-
         return dp[target];
     }
 }
